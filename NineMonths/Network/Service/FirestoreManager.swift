@@ -11,9 +11,10 @@ import Foundation
 
 class FirestoreManager<T: Codable>: NSObject, Codable {
     public func get(by order: String, onCompletion: @escaping ([T?]?, Error?) -> Void) {
+        let localeLang = Locale.current.languageCode
         let typeNameStr = String(describing: T.self)
         let db = Firestore.firestore()
-        let collectionRef = db.collection(typeNameStr).order(by: order, descending: false)
+        let collectionRef = db.collection(typeNameStr+(localeLang?.uppercased())!).order(by: order, descending: false)
         var docs: [T] = []
 
         collectionRef.getDocuments { query, error in
@@ -21,7 +22,7 @@ class FirestoreManager<T: Codable>: NSObject, Codable {
                 onCompletion(nil, error)
             } else {
                 for document in query!.documents {
-                    print("\(document.documentID) => \(document.data())")
+//                    print("\(document.documentID) => \(document.data())")
                     let doc = document as QueryDocumentSnapshot?
                     let result = Result {
                         try doc.flatMap {
@@ -29,7 +30,7 @@ class FirestoreManager<T: Codable>: NSObject, Codable {
                         }
                     }
                     if let error = error {
-                        print(error)
+                        fatalError(error.localizedDescription)
                     }
                     switch result {
                     case let .success(uploadDocument):
@@ -37,7 +38,7 @@ class FirestoreManager<T: Codable>: NSObject, Codable {
                             docs.append(uploadDocument)
                         } else {}
                     case let .failure(error):
-                        print("Error decoding Document \(error)")
+                        fatalError("Error decoding Document \(error.localizedDescription)")
                         onCompletion(nil, error)
                     }
                 }

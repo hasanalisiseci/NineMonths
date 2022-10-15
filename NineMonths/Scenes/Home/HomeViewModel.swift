@@ -24,6 +24,7 @@ class HomeViewModel: NSObject, ObservableObject {
         FirestoreManager<MonthByMonth>().get(by: "month") { monthResult, _ in
             if let monthResult = monthResult {
                 self.monthByMonthPregnancy = monthResult
+
             } else {
                 fatalError("Unable to retrieve the saved monthArray object")
             }
@@ -34,9 +35,11 @@ class HomeViewModel: NSObject, ObservableObject {
         FirestoreManager<WeekByWeek>().get(by: "week") { weekResult, _ in
             if let weekResult = weekResult {
                 self.weekByWeekPregnancy = weekResult
+
             } else {
                 fatalError("Unable to retrieve the saved weekArray object")
             }
         }
     }
+
 }

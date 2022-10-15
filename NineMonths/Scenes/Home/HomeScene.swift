@@ -18,26 +18,30 @@ struct HomeScene: View {
 
     var body: some View {
         NavigationView {
-            VStack(content: {
-                HStack {
+           ScrollView {
+                VStack(content: {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        
-                    }
-                }
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(homeViewModel.monthByMonthPregnancy, id: \.self) { item in
-                        NavigationLink(destination: DetailScene(item: item!)) {
-                            MonthCell(number: item!.month, photoUrl: item!.embryoPhotoUrl)
+                        HStack {
+                            ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
+                                WeeklyCell(model: item!)
+                            }
                         }
                     }
-                }
-                NavigationLink(destination: NameScene()) {
-                    RoundedButtonView(imageURL: NetworkManager.babyImageURL, title: Constants.trendBabyNames)
-                }
-                Spacer()
-            })
-            .padding(.horizontal)
-            .navigationTitle(Text("Aydan Aya Gebelik"))
+
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(homeViewModel.monthByMonthPregnancy, id: \.self) { item in
+                            NavigationLink(destination: DetailScene(item: item!)) {
+                                MonthlyCell(number: item!.month, photoUrl: item!.embryoPhotoUrl)
+                            }
+                        }
+                    }
+                    NavigationLink(destination: NameScene()) {
+                        RoundedButtonView(imageURL: NetworkManager.babyImageURL, title: Constants.trendBabyNames)
+                    }
+                    Spacer()
+                })
+                .navigationTitle(Text("Aydan Aya Gebelik"))
+            }
         }
     }
 }

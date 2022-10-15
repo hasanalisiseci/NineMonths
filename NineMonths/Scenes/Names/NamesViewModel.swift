@@ -12,7 +12,6 @@ class NamesViewModel: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        print("init çalışıyor")
         getNames()
     }
 
@@ -24,7 +23,7 @@ class NamesViewModel: NSObject, ObservableObject {
             case let .success(names):
                 self.namesArray = names
             case let .failure(error):
-                print(error.localizedDescription)
+                fatalError(error.localizedDescription)
             }
         }
     }

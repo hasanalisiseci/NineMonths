@@ -8,7 +8,7 @@
 import Kingfisher
 import SwiftUI
 
-struct MonthCell: View {
+struct MonthlyCell: View {
     var number: Int
     var photoUrl: String
     var body: some View {

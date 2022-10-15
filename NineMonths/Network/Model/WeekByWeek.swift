@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct WeekByWeek: Codable {
+struct WeekByWeek: Codable, Hashable, Identifiable {
+    var id: Int { description.count }
     var week: Int
     var description: String
     var imageURL: String
