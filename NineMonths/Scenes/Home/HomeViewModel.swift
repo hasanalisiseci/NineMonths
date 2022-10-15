@@ -8,23 +8,31 @@
 import Foundation
 
 class HomeViewModel: NSObject, ObservableObject {
-    @Published var monthByMonthPregnancy: [MonthByMonthModel] = []
+    @Published var monthByMonthPregnancy: [MonthByMonth?] = []
+    @Published var weekByWeekPregnancy: [WeekByWeek] = []
 
     override init() {
         super.init()
         getMonthByMonthInfos()
+        getWeekByWeekInfos()
     }
 
     private func getMonthByMonthInfos() {
-        FirestoreManager.shared.getDocuments(collectionName: PathNames.MonthByMonth.rawValue, by: "month") { [weak self] result in
-
-            guard let self = self else { return }
-
-            switch result {
-            case let .success(data):
-                self.monthByMonthPregnancy = data
-            case let .failure(error):
-                print(error.localizedDescription)
+        FirestoreManager<MonthByMonth>().get(by: "month") { monthResult, error  in
+            if let monthResult = monthResult {
+                self.monthByMonthPregnancy = monthResult
+            } else {
+                fatalError("Unable to retrieve the saved Book object")
+            }
+        }
+    }
+    
+    private func getWeekByWeekInfos() {
+        FirestoreManager<WeekByWeek>().get(by: "week") { weekResult, error  in
+            if let weekResult = weekResult {
+                print(weekResult)
+            } else {
+                fatalError("Unable to retrieve the saved Book object")
             }
         }
     }

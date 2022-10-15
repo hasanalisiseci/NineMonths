@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MonthByMonthModel: Codable, Hashable {
+struct MonthByMonth: Codable, Hashable {
     var month: Int
     var description: String
     var watchOutThings: [String]

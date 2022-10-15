@@ -15,7 +15,8 @@
 		7452FDD428FAB050008DF6C9 /* DetailThingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452FDD328FAB050008DF6C9 /* DetailThingsCell.swift */; };
 		7452FDD628FAB07F008DF6C9 /* NamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452FDD528FAB07F008DF6C9 /* NamesCell.swift */; };
 		7452FDD828FAB090008DF6C9 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452FDD728FAB090008DF6C9 /* Image+Extension.swift */; };
-		74805E8928FA0B9C001731F5 /* MonthByMonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E8828FA0B9C001731F5 /* MonthByMonthModel.swift */; };
+		7452FDDC28FACCC0008DF6C9 /* WeekByWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452FDDB28FACCC0008DF6C9 /* WeekByWeek.swift */; };
+		74805E8928FA0B9C001731F5 /* MonthByMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E8828FA0B9C001731F5 /* MonthByMonth.swift */; };
 		74805E8C28FA0C22001731F5 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E8B28FA0C22001731F5 /* FirestoreManager.swift */; };
 		74805E8F28FA0DF9001731F5 /* PathNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E8E28FA0DF9001731F5 /* PathNames.swift */; };
 		74805E9328FA0E72001731F5 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9228FA0E72001731F5 /* HomeScene.swift */; };
@@ -53,7 +54,8 @@
 		7452FDD328FAB050008DF6C9 /* DetailThingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailThingsCell.swift; sourceTree = "<group>"; };
 		7452FDD528FAB07F008DF6C9 /* NamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesCell.swift; sourceTree = "<group>"; };
 		7452FDD728FAB090008DF6C9 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
-		74805E8828FA0B9C001731F5 /* MonthByMonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthByMonthModel.swift; sourceTree = "<group>"; };
+		7452FDDB28FACCC0008DF6C9 /* WeekByWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekByWeek.swift; sourceTree = "<group>"; };
+		74805E8828FA0B9C001731F5 /* MonthByMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthByMonth.swift; sourceTree = "<group>"; };
 		74805E8B28FA0C22001731F5 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		74805E8E28FA0DF9001731F5 /* PathNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathNames.swift; sourceTree = "<group>"; };
 		74805E9228FA0E72001731F5 /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
@@ -143,7 +145,8 @@
 		74805E8728FA0B92001731F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				74805E8828FA0B9C001731F5 /* MonthByMonthModel.swift */,
+				74805E8828FA0B9C001731F5 /* MonthByMonth.swift */,
+				7452FDDB28FACCC0008DF6C9 /* WeekByWeek.swift */,
 				74805EB028FA3CEF001731F5 /* NameModel.swift */,
 			);
 			path = Model;
@@ -387,7 +390,8 @@
 				7452FDCF28FAAC79008DF6C9 /* MonthCell.swift in Sources */,
 				74805EA528FA2529001731F5 /* NetworkManager.swift in Sources */,
 				74805E8C28FA0C22001731F5 /* FirestoreManager.swift in Sources */,
-				74805E8928FA0B9C001731F5 /* MonthByMonthModel.swift in Sources */,
+				74805E8928FA0B9C001731F5 /* MonthByMonth.swift in Sources */,
+				7452FDDC28FACCC0008DF6C9 /* WeekByWeek.swift in Sources */,
 				74805EB128FA3CF0001731F5 /* NameModel.swift in Sources */,
 				7452FDD128FAACAB008DF6C9 /* RoundedButtonView.swift in Sources */,
 				748A65F728F9AE0C004A2168 /* NineMonthsApp.swift in Sources */,

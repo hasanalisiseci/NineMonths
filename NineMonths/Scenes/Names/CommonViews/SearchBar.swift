@@ -18,7 +18,7 @@ struct SearchBar: View {
             ).padding()
     }
 }
- 
+
 struct GradientTextFieldBackground: TextFieldStyle {
     let systemImageString: String
     func _body(configuration: TextField<Self._Label>) -> some View {

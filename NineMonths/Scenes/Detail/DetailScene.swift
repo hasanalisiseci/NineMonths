@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailScene: View {
-    var item: MonthByMonthModel
+    var item: MonthByMonth
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,6 +32,6 @@ struct DetailScene: View {
 
 struct DetailScene_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScene(item: MonthByMonthModel(month: 1, description: "", watchOutThings: [], embryoPhotoUrl: ""))
+        DetailScene(item: MonthByMonth(month: 1, description: "", watchOutThings: [], embryoPhotoUrl: ""))
     }
 }

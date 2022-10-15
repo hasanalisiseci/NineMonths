@@ -19,10 +19,15 @@ struct HomeScene: View {
     var body: some View {
         NavigationView {
             VStack(content: {
+                HStack {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        
+                    }
+                }
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(homeViewModel.monthByMonthPregnancy, id: \.self) { item in
-                        NavigationLink(destination: DetailScene(item: item)) {
-                            MonthCell(number: item.month, photoUrl: item.embryoPhotoUrl)
+                        NavigationLink(destination: DetailScene(item: item!)) {
+                            MonthCell(number: item!.month, photoUrl: item!.embryoPhotoUrl)
                         }
                     }
                 }
