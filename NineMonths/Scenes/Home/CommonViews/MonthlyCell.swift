@@ -27,7 +27,7 @@ struct MonthlyCell: View {
                     Text(number.toStr)
                         .bold()
                         .font(.title)
-                        .padding(.leading, 5)
+                        .padding(.leading)
                         .padding(.top, 5)
                         .foregroundColor(.red)
                     Spacer()

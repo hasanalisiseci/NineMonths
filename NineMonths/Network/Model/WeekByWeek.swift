@@ -9,6 +9,7 @@ import Foundation
 
 struct WeekByWeek: Codable, Hashable, Identifiable {
     var id: Int { description.count }
+    var title: String
     var week: Int
     var description: String
     var imageURL: String

@@ -18,29 +18,47 @@ struct HomeScene: View {
 
     var body: some View {
         NavigationView {
-           ScrollView {
+            ScrollView {
                 VStack(content: {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
-                                WeeklyCell(model: item!)
+                    HStack {
+                        Text(Constants.weekByWeekPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
+                        Spacer()
+                    }
+                    if homeViewModel.weekByWeekPregnancy.isEmpty {
+                        ProgressView()
+                            .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth * 0.6)
+                    } else {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
+                                    WeeklyCell(model: item!)
+                                }
                             }
                         }
+                    }
+                    HStack {
+                        Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
+                        Spacer()
+                    }
+                    if homeViewModel.monthByMonthPregnancy.isEmpty {
+                        ProgressView()
+                            .frame(width: UIScreen.screenWidth * 0.9, height: UIScreen.screenWidth * 0.9)
+                    } else {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(homeViewModel.monthByMonthPregnancy, id: \.self) { item in
+                                NavigationLink(destination: DetailScene(item: item!)) {
+                                    MonthlyCell(number: item!.month, photoUrl: item!.embryoPhotoUrl)
+                                }
+                            }
+                        }.padding(.horizontal)
                     }
 
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(homeViewModel.monthByMonthPregnancy, id: \.self) { item in
-                            NavigationLink(destination: DetailScene(item: item!)) {
-                                MonthlyCell(number: item!.month, photoUrl: item!.embryoPhotoUrl)
-                            }
-                        }
-                    }
                     NavigationLink(destination: NameScene()) {
                         RoundedButtonView(imageURL: NetworkManager.babyImageURL, title: Constants.trendBabyNames)
                     }
                     Spacer()
                 })
-                .navigationTitle(Text("Aydan Aya Gebelik"))
+                .navigationTitle(Text(Constants.appName))
             }
         }
     }

@@ -30,6 +30,8 @@ struct NameScene: View {
                 }.padding(.horizontal)
             }
         }
+        .navigationTitle(Text(Constants.trendBabyNames))
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

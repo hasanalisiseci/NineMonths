@@ -14,7 +14,7 @@ class FirestoreManager<T: Codable>: NSObject, Codable {
         let localeLang = Locale.current.languageCode
         let typeNameStr = String(describing: T.self)
         let db = Firestore.firestore()
-        let collectionRef = db.collection(typeNameStr+(localeLang?.uppercased())!).order(by: order, descending: false)
+        let collectionRef = db.collection(typeNameStr + (localeLang?.uppercased())!).order(by: order, descending: false)
         var docs: [T] = []
 
         collectionRef.getDocuments { query, error in
@@ -22,7 +22,6 @@ class FirestoreManager<T: Codable>: NSObject, Codable {
                 onCompletion(nil, error)
             } else {
                 for document in query!.documents {
-//                    print("\(document.documentID) => \(document.data())")
                     let doc = document as QueryDocumentSnapshot?
                     let result = Result {
                         try doc.flatMap {

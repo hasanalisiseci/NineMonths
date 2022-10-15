@@ -9,8 +9,10 @@ import Foundation
 
 struct MonthByMonth: Codable, Hashable, Identifiable {
     var id: Int { description.count }
+    var title: String
     var month: Int
     var description: String
+    var watchOutTitle: String
     var watchOutThings: [String]
     var embryoPhotoUrl: String
 }

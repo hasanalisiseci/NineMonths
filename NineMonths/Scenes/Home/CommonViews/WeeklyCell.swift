@@ -28,7 +28,7 @@ struct WeeklyCell: View {
             }.padding(.top, 30)
             VStack {
                 HStack {
-                    Text(Constants.weeklyTitleFirstPart + model.week.toStr + Constants.weeklyTitleSecondPart).bold().font(.title).foregroundColor(.white).padding()
+                    Text(model.title).bold().font(.title).foregroundColor(.white).padding()
                     Spacer()
                 }
                 Spacer()
@@ -43,6 +43,6 @@ struct WeeklyCell: View {
 
 struct WeeklyCell_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklyCell(model: WeekByWeek(week: 1, description: "Akciğerlerindeki gelişim tamamlanan bebekler, gebeliğin 9. ayında doğuma tamamen hazırdırlar. Doğduğu andan itibaren vücut ısısını korumasına yardımcı olacak yağ tabakası gelişimini tamamlarken kilo alımı ve irileşme de maksimum seviyeye ulaşır. Kısacası 9 aylık gebelik dönemiyle birlikte bebeğinizin sesini ilk kez duymaya ve minik elleriyle parmaklarınızı sıkmasına çok az kaldı.", imageURL: "https://firebasestorage.googleapis.com/v0/b/ninemonths-1354.appspot.com/o/embryoWeekByWeek%2F30-haftalik-hamilelik.jpeg?alt=media&token=3cf55568-38de-4abb-a648-7782a9a305ec"))
+        WeeklyCell(model: WeekByWeek(title: "Gebelikte 1. Hafta", week: 1, description: "Akciğerlerindeki gelişim tamamlanan bebekler, gebeliğin 9. ayında doğuma tamamen hazırdırlar. Doğduğu andan itibaren vücut ısısını korumasına yardımcı olacak yağ tabakası gelişimini tamamlarken kilo alımı ve irileşme de maksimum seviyeye ulaşır. Kısacası 9 aylık gebelik dönemiyle birlikte bebeğinizin sesini ilk kez duymaya ve minik elleriyle parmaklarınızı sıkmasına çok az kaldı.", imageURL: "https://firebasestorage.googleapis.com/v0/b/ninemonths-1354.appspot.com/o/embryoWeekByWeek%2F30-haftalik-hamilelik.jpeg?alt=media&token=3cf55568-38de-4abb-a648-7782a9a305ec"))
     }
 }

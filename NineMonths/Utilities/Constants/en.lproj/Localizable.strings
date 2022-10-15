@@ -5,10 +5,8 @@
    Created by Hasan Ali Şişeci on 15.10.2022.
 
  */
-"Enter letter..." = "Enter letter...";
-"Months Pregnant" = "Months Pregnant";
-"Trending Baby Names Recently" = "Trending Baby Names Recently";
-"What are the things to pay attention to in the" = "What are the things to pay attention to in the";
-"month of pregnancy?" = "month of pregnancy?";
-"weeklyPregnancyFirstPart" = "";
-"weeklyPregnancySecondPart" = "weeks of pregnancy";
+"app-name" = "Nine Months";
+"enter-letter" = "Enter letter...";
+"trend-baby-names" = "Trending Baby Names Recently";
+"monthByMonthPreg" = "Month To Month Pregnancy";
+"weekByWeekPreg" = "Week To Month Pregnancy";
