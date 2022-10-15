@@ -6,7 +6,15 @@
 
  */
 "app-name" = "Nine Months";
+"day" = "Day";
+"week" = "Week";
 "enter-letter" = "Enter letter...";
+"for-more" = "for more";
 "trend-baby-names" = "Trending Baby Names Recently";
 "monthByMonthPreg" = "Month To Month Pregnancy";
 "weekByWeekPreg" = "Week To Month Pregnancy";
+"select-sat" = "Your Last Menstrual Date";
+"probably-date-of-birt"= "Your baby's probable date of birth";
+"probably-date-of-conception" = "Your probable date of conception";
+"hearbet-on-ultrasound" = "Hearing Your Baby's First Heartbeat on Ultrasound";
+"fetal-age" = "Fetal Age";

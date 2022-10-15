@@ -8,18 +8,36 @@
 import SwiftUI
 
 struct EstimatedBirthView: View {
-    @State private var birthDate = Date()
+    @State private var satDate = Date()
+    
+    private var estimatedBirthDate: Int {
+        return Int(satDate.timeIntervalSince1970) + fourtyWeekTimestamp
+    }
+
+    private let formatted = Date().formatted(.dateTime.day().month(.wide).year())
+    private let fourtyWeekTimestamp = 24192000
 
     var body: some View {
         ZStack {
             VStack {
-                DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
+                DatePicker(selection: $satDate, in: ...Date(), displayedComponents: .date) {
                     HStack {
-                        Spacer()
-                        Text("Select a date").foregroundColor(.primary).bold().font(.title2)
+                        Text(Constants.selectSAT).foregroundColor(.primary).bold().font(.title2)
                     }
                 }.padding()
                 Spacer()
+                Text(Constants.probableDateOfBirth).font(.title2)
+                Text("\(Date(timeIntervalSince1970: TimeInterval(estimatedBirthDate)).formatted(.dateTime.day().month(.wide).year()))")
+                    .bold().font(.title)
+                Spacer()
+
+                NavigationLink(destination: DetailEstimatedDateOfBirthScene(satDate: $satDate)) {
+                    HStack {
+                        Spacer()
+                        Text(Constants.forMore).foregroundColor(.white)
+                        Image(systemName: "chevron.right").foregroundColor(.white)
+                    }
+                }.padding()
             }
         }
 

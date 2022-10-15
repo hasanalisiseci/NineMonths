@@ -21,7 +21,7 @@
 		74805E8F28FA0DF9001731F5 /* PathNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E8E28FA0DF9001731F5 /* PathNames.swift */; };
 		74805E9328FA0E72001731F5 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9228FA0E72001731F5 /* HomeScene.swift */; };
 		74805E9528FA0E8B001731F5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9428FA0E8B001731F5 /* HomeViewModel.swift */; };
-		74805E9828FA15F7001731F5 /* DetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9728FA15F7001731F5 /* DetailScene.swift */; };
+		74805E9828FA15F7001731F5 /* MonthlyDetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9728FA15F7001731F5 /* MonthlyDetailScene.swift */; };
 		74805E9A28FA168F001731F5 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9928FA168F001731F5 /* UIScreen+Extension.swift */; };
 		74805E9D28FA1EB2001731F5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74805E9C28FA1EB2001731F5 /* Kingfisher */; };
 		74805E9F28FA220E001731F5 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74805E9E28FA220E001731F5 /* Int+Extension.swift */; };
@@ -44,6 +44,8 @@
 		748A661A28F9B286004A2168 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 748A661928F9B286004A2168 /* FirebaseStorage */; };
 		749ECF6B28FAE3D100C0CAB1 /* WeeklyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF6A28FAE3D100C0CAB1 /* WeeklyCell.swift */; };
 		749ECF6D28FAE9D800C0CAB1 /* EstimatedBirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF6C28FAE9D800C0CAB1 /* EstimatedBirthView.swift */; };
+		749ECF6F28FB496700C0CAB1 /* WeeklyDetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF6E28FB496600C0CAB1 /* WeeklyDetailScene.swift */; };
+		749ECF7128FB503B00C0CAB1 /* DetailEstimatedDateOfBirthScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF7028FB503B00C0CAB1 /* DetailEstimatedDateOfBirthScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +64,7 @@
 		74805E8E28FA0DF9001731F5 /* PathNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathNames.swift; sourceTree = "<group>"; };
 		74805E9228FA0E72001731F5 /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		74805E9428FA0E8B001731F5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		74805E9728FA15F7001731F5 /* DetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScene.swift; sourceTree = "<group>"; };
+		74805E9728FA15F7001731F5 /* MonthlyDetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyDetailScene.swift; sourceTree = "<group>"; };
 		74805E9928FA168F001731F5 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		74805E9E28FA220E001731F5 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		74805EA428FA2529001731F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		748A660E28F9B1DE004A2168 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		749ECF6A28FAE3D100C0CAB1 /* WeeklyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCell.swift; sourceTree = "<group>"; };
 		749ECF6C28FAE9D800C0CAB1 /* EstimatedBirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedBirthView.swift; sourceTree = "<group>"; };
+		749ECF6E28FB496600C0CAB1 /* WeeklyDetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDetailScene.swift; sourceTree = "<group>"; };
+		749ECF7028FB503B00C0CAB1 /* DetailEstimatedDateOfBirthScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEstimatedDateOfBirthScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +193,8 @@
 		74805E9628FA15E6001731F5 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				74805E9728FA15F7001731F5 /* DetailScene.swift */,
+				74805E9728FA15F7001731F5 /* MonthlyDetailScene.swift */,
+				749ECF6E28FB496600C0CAB1 /* WeeklyDetailScene.swift */,
 				7452FDDA28FAB0DD008DF6C9 /* CommonViews */,
 			);
 			path = Detail;
@@ -287,8 +292,17 @@
 				74805E9028FA0E47001731F5 /* Home */,
 				74805E9628FA15E6001731F5 /* Detail */,
 				74805EB428FA3D1C001731F5 /* Names */,
+				749ECF7228FB503F00C0CAB1 /* DetailEstimated */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		749ECF7228FB503F00C0CAB1 /* DetailEstimated */ = {
+			isa = PBXGroup;
+			children = (
+				749ECF7028FB503B00C0CAB1 /* DetailEstimatedDateOfBirthScene.swift */,
+			);
+			path = DetailEstimated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +399,7 @@
 				74805E9A28FA168F001731F5 /* UIScreen+Extension.swift in Sources */,
 				74805E8F28FA0DF9001731F5 /* PathNames.swift in Sources */,
 				7452FDD428FAB050008DF6C9 /* DetailThingsCell.swift in Sources */,
+				749ECF6F28FB496700C0CAB1 /* WeeklyDetailScene.swift in Sources */,
 				74805E9528FA0E8B001731F5 /* HomeViewModel.swift in Sources */,
 				74805E9F28FA220E001731F5 /* Int+Extension.swift in Sources */,
 				74805EA828FA2583001731F5 /* ErrorTypes.swift in Sources */,
@@ -392,7 +407,8 @@
 				7452FDC728FAA75A008DF6C9 /* String+Extension.swift in Sources */,
 				74805EBA28FA3D27001731F5 /* NameScene.swift in Sources */,
 				749ECF6B28FAE3D100C0CAB1 /* WeeklyCell.swift in Sources */,
-				74805E9828FA15F7001731F5 /* DetailScene.swift in Sources */,
+				749ECF7128FB503B00C0CAB1 /* DetailEstimatedDateOfBirthScene.swift in Sources */,
+				74805E9828FA15F7001731F5 /* MonthlyDetailScene.swift in Sources */,
 				7452FDD628FAB07F008DF6C9 /* NamesCell.swift in Sources */,
 				7452FDCF28FAAC79008DF6C9 /* MonthlyCell.swift in Sources */,
 				74805EA528FA2529001731F5 /* NetworkManager.swift in Sources */,

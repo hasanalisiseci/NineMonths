@@ -31,11 +31,14 @@ struct HomeScene: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
-                                    WeeklyCell(model: item!)
+                                    NavigationLink(destination: WeeklyDetailScene(item: item!)) {
+                                        WeeklyCell(model: item!)
+                                    }
                                 }
                             }
                         }
                     }
+                    EstimatedBirthView()
                     HStack {
                         Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
                         Spacer()
@@ -46,8 +49,8 @@ struct HomeScene: View {
                     } else {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(homeViewModel.monthByMonthPregnancy, id: \.self) { item in
-                                NavigationLink(destination: DetailScene(item: item!)) {
-                                    MonthlyCell(number: item!.month, photoUrl: item!.embryoPhotoUrl)
+                                NavigationLink(destination: MonthlyDetailScene(item: item!)) {
+                                    MonthlyCell(item: item!)
                                 }
                             }
                         }.padding(.horizontal)

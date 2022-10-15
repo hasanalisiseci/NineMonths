@@ -7,8 +7,16 @@
  */
 
 "app-name" = "Dokuz Ay";
+"day" = "Gün";
+"week" = "Hafta";
 "enter-letter" = "Harf giriniz...";
-"Trending Baby Names Recently" = "Son Dönemde Trend Olan Bebek İsimleri";
+"for-more" = "daha fazlası";
+"trend-baby-names" = "Son Dönemde Trend Olan Bebek İsimleri";
 "monthByMonthPreg" = "Aydan Aya Gebelik";
 "weekByWeekPreg" = "Haftadan Haftaya Gebelik";
+"select-sat" = "Son Adet Tarihiniz";
+"probably-date-of-birt" = "Bebeğinizin muhtemel doğum tarihi";
+"probably-date-of-conception" = "Muhtemel gebe kalma tarihiniz";
+"hearbet-on-ultrasound" = "Bebeğinizin İlk Kalp Atışının Ultrasonda Duyulması";
+"fetal-age" = "Fetal Yaş";
 

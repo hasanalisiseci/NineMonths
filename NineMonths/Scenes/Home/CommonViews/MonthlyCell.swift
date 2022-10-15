@@ -9,11 +9,10 @@ import Kingfisher
 import SwiftUI
 
 struct MonthlyCell: View {
-    var number: Int
-    var photoUrl: String
+    var item: MonthByMonth
     var body: some View {
         ZStack {
-            KFImage(URL(string: photoUrl))
+            KFImage(URL(string: item.embryoPhotoUrl))
                 .resizable()
                 .placeholder({ _ in
                     ProgressView()
@@ -24,10 +23,10 @@ struct MonthlyCell: View {
                 .foregroundColor(.red).opacity(0.3)
             VStack {
                 HStack {
-                    Text(number.toStr)
+                    Text(item.month.toStr)
                         .bold()
                         .font(.title)
-                        .padding(.leading)
+                        .padding(.leading, 5)
                         .padding(.top, 5)
                         .foregroundColor(.red)
                     Spacer()
