@@ -10,5 +10,5 @@ import Foundation
 struct WeekByWeek: Codable {
     var week: Int
     var description: String
-    var ImageURL: String
+    var imageURL: String
 }
