@@ -30,6 +30,9 @@ struct NameScene: View {
                 }.padding(.horizontal)
             }
         }
+        .onAppear {
+            FirebaseAnalyticsManager.shared.event(eventName: "names_scene", eventDescription: "Names scene opened.")
+        }
         .navigationTitle(Text(Constants.trendBabyNames))
         .navigationBarTitleDisplayMode(.large)
     }

@@ -24,9 +24,13 @@ struct WeeklyDetailScene: View {
             Text(item.description).font(.title3)
                 .padding()
             Spacer()
-        }.padding()
-            .navigationTitle(Text("\(item.title)"))
-            .navigationBarTitleDisplayMode(.large)
+        }
+        .onAppear {
+            FirebaseAnalyticsManager.shared.event(eventName: "weekly_detail_scene", eventDescription: "Weelly detail scene opened.")
+        }
+        .padding()
+        .navigationTitle(Text("\(item.title)"))
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

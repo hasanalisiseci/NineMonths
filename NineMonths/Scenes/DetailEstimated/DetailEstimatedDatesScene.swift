@@ -66,6 +66,9 @@ struct DetailEstimatedDatesScene: View {
                 }
             }
         }
+        .onAppear {
+            FirebaseAnalyticsManager.shared.event(eventName: "estimated_detail_scene", eventDescription: "Estimated detail scene opened")
+        }
         .navigationTitle(Constants.probableDateOfBirth)
         .navigationBarTitleDisplayMode(.inline)
     }

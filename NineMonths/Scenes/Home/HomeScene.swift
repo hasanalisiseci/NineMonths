@@ -5,6 +5,8 @@
 //  Created by Hasan Ali Şişeci on 15.10.2022.
 //
 
+import AppTrackingTransparency
+import FirebaseAnalytics
 import SwiftUI
 
 struct HomeScene: View {
@@ -62,6 +64,19 @@ struct HomeScene: View {
                     Spacer()
                 })
                 .navigationTitle(Text(Constants.appName))
+            }
+        }.onAppear {
+            FirebaseAnalyticsManager.shared.event(eventName: "homeScene", eventDescription: "App opened.")
+            if #available(iOS 14, *) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    ATTrackingManager.requestTrackingAuthorization { status in
+                        if status == .authorized {
+                            Analytics.logEvent(AnalyticsEventScreenView,
+                                               parameters: [AnalyticsParameterScreenName: "\(type(of: self))",
+                                                            AnalyticsParameterScreenClass: "\(type(of: self))"])
+                        }
+                    }
+                })
             }
         }
     }

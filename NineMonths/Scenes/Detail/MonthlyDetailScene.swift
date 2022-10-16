@@ -24,9 +24,13 @@ struct MonthlyDetailScene: View {
                     }
                 }
             }
-        }.padding()
-            .navigationTitle(Text("\(item.title)"))
-            .navigationBarTitleDisplayMode(.large)
+        }
+        .onAppear {
+            FirebaseAnalyticsManager.shared.event(eventName: "monthly_detail_scene", eventDescription: "Monthly detail scene opened.")
+        }
+        .padding()
+        .navigationTitle(Text("\(item.title)"))
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
