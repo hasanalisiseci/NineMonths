@@ -11,12 +11,15 @@
 "week" = "Hafta";
 "enter-letter" = "Harf giriniz...";
 "for-more" = "daha fazlası";
-"trend-baby-names" = "Son Dönemde Trend Olan Bebek İsimleri";
+"trend-baby-names" = "Trend Bebek İsimleri";
 "monthByMonthPreg" = "Aydan Aya Gebelik";
 "weekByWeekPreg" = "Haftadan Haftaya Gebelik";
 "select-sat" = "Son Adet Tarihiniz";
 "probably-date-of-birt" = "Bebeğinizin muhtemel doğum tarihi";
 "probably-date-of-conception" = "Muhtemel gebe kalma tarihiniz";
-"hearbet-on-ultrasound" = "Bebeğinizin İlk Kalp Atışının Ultrasonda Duyulması";
+"heartbeat-on-ultrasound" = "Bebeğinizin ilk kalp atışınınultrasonda duyulması";
 "fetal-age" = "Fetal Yaş";
-
+"double-marker-test" = "İkili test için en iyi tarih aralığı";
+"organ-screening" = "Organ tarama ultrasonu tarihi";
+"cervical-length" = "Risk faktörleri olan hastalarda rahim ağzı uzunluğu değerlendirmek için en iyi zaman";
+"quadruple-test" = "4'lü test için en iyi tarih aralığı";

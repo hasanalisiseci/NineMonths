@@ -11,7 +11,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private let baseURL = "https://gist.githubusercontent.com/hasanalisiseci/783ff379a1ddf532bdc0d691fc0766aa/raw/5ccd135f606e8cf48cc486665a7588d4d4a02f97/isimler"
 
-    static let babyImageURL = "https://images.unsplash.com/photo-1566004100631-35d015d6a491?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+    static let babyImageURL = "https://plus.unsplash.com/premium_photo-1661373088495-ea30603c8113?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
 
     private init() {}
 

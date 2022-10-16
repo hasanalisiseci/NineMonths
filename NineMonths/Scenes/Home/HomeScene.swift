@@ -38,7 +38,7 @@ struct HomeScene: View {
                             }
                         }
                     }
-                    EstimatedBirthView()
+                    EstimatedDateView()
                     HStack {
                         Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
                         Spacer()

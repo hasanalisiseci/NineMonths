@@ -10,11 +10,15 @@
 "week" = "Week";
 "enter-letter" = "Enter letter...";
 "for-more" = "for more";
-"trend-baby-names" = "Trending Baby Names Recently";
+"trend-baby-names" = "Trending Baby Names";
 "monthByMonthPreg" = "Month To Month Pregnancy";
 "weekByWeekPreg" = "Week To Month Pregnancy";
 "select-sat" = "Your Last Menstrual Date";
 "probably-date-of-birt"= "Your baby's probable date of birth";
 "probably-date-of-conception" = "Your probable date of conception";
-"hearbet-on-ultrasound" = "Hearing Your Baby's First Heartbeat on Ultrasound";
+"heartbeat-on-ultrasound" = "Hearing your baby's first heartbeat on ultrasound";
 "fetal-age" = "Fetal Age";
+"double-marker-test" = "Best date range for double marker testing";
+"organ-screening" = "History of organ screening ultrasound";
+"cervical-length" = "Best time to assess cervical length in patients with risk factors";
+"quadruple-test" = "Best date range for quadruple test";

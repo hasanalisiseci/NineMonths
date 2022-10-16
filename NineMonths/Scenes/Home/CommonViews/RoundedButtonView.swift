@@ -18,9 +18,10 @@ struct RoundedButtonView: View {
                 .placeholder({ _ in
                     ProgressView()
                 })
-                .frame(width: UIScreen.screenWidth - 20, height: 150)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: UIScreen.screenWidth - 20)
                 .cornerRadius(12)
-            RoundedRectangle(cornerRadius: 12).frame(width: UIScreen.screenWidth - 20, height: 150).foregroundColor(.pink).opacity(0.5)
+            RoundedRectangle(cornerRadius: 12).frame(width: UIScreen.screenWidth - 20).foregroundColor(.pink).opacity(0.5)
             Text(title).bold().font(.title).multilineTextAlignment(.leading).foregroundColor(.white)
         }.padding(.vertical)
     }
