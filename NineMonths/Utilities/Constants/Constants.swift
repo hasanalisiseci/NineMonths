@@ -19,6 +19,10 @@ struct Constants {
     static let selectSAT = "select-sat".localized()
     static let probableDateOfBirth = "probably-date-of-birt".localized()
     static let fetalAge = "fetal-age".localized()
-    static let probableDateOfConception = "probably-date-of-conception".localized()
-    static let hearbeat = "hearbet-on-ultrasound".localized()
+    static let probableDateOfGetPregnant = "probably-date-of-conception".localized()
+    static let heartbeat = "heartbeat-on-ultrasound".localized()
+    static let doubleMarkerTest = "double-marker-test".localized()
+    static let organScreening = "organ-screening".localized()
+    static let cervicalLength = "cervical-length".localized()
+    static let quadrupleTest = "quadruple-test".localized()
 }
