@@ -7,6 +7,7 @@
 
 import AppTrackingTransparency
 import FirebaseAnalytics
+import FirebaseAuth
 import SwiftUI
 
 struct HomeScene: View {
