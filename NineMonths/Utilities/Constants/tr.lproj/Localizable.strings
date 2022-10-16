@@ -23,3 +23,16 @@
 "organ-screening" = "Organ tarama ultrasonu tarihi";
 "cervical-length" = "Risk faktörleri olan hastalarda rahim ağzı uzunluğu değerlendirmek için en iyi zaman";
 "quadruple-test" = "4'lü test için en iyi tarih aralığı";
+"probable-zodiac-sign" = "Bebeğinizin muhtemel burcu";
+"aquarius" = "Kova ♒️";
+"pisces" = "Balık ♓️";
+"aries" = "Koç ♈️";
+"taurus" = "Boğa ♉️";
+"gemini" = "İkizler ♊️";
+"cancer" = "Yengeç ♋️";
+"leo" = "Aslan ♌️";
+"virgo" = "Başak ♍️";
+"libra" = "Terazi ♎️";
+"scorpio" = "Akrep ♏️";
+"sagittarius" = "Yay ♐️";
+"capricorn" = "Oğlak ♑️";

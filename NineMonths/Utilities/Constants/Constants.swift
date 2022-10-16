@@ -25,4 +25,5 @@ struct Constants {
     static let organScreening = "organ-screening".localized()
     static let cervicalLength = "cervical-length".localized()
     static let quadrupleTest = "quadruple-test".localized()
+    static let probableZodiacSign = "probable-zodiac-sign".localized()
 }

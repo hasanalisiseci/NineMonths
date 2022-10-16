@@ -22,3 +22,16 @@
 "organ-screening" = "History of organ screening ultrasound";
 "cervical-length" = "Best time to assess cervical length in patients with risk factors";
 "quadruple-test" = "Best date range for quadruple test";
+"probable-zodiac-sign" = "Your baby's probable zodiac sign";
+"aquarius" = "Aquarius ♒️";
+"pisces" = "Pisces ♓️";
+"aries" = "Aries ♈️";
+"taurus" = "Taurus ♉️";
+"gemini" = "Gemini ♊️";
+"cancer" = "Cancer ♋️";
+"leo" = "Leo ♌️";
+"virgo" = "Virgo ♍️";
+"libra" = "Libra ♎️";
+"scorpio" = "Scorpio ♏️";
+"sagittarius" = "Sagittarius ♐️";
+"capricorn" = "Capricorn ♑️";

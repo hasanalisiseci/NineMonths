@@ -59,6 +59,11 @@ struct DetailEstimatedDatesScene: View {
                     Text(viewModel.bestDateOfservicalLength)
                         .rowValueModifier()
                 }
+                VStack(alignment: .leading) {
+                    Text(Constants.probableZodiacSign).font(.title2)
+                    Text(viewModel.probableZodiacSign)
+                        .rowValueModifier()
+                }
                 VStack(alignment: .center) {
                     Text(Constants.probableDateOfBirth).font(.title2)
                     Text(viewModel.estimatedBirthDate)
