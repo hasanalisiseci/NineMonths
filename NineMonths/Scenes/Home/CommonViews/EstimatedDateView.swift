@@ -9,17 +9,18 @@ import SwiftUI
 
 struct EstimatedDateView: View {
     @ObservedObject var viewModel = EstimatedDatesViewModel()
+    @Environment(\.colorScheme) var colorScheme
     @State var isNavigate = false
 
     var body: some View {
         ZStack {
             NavigationLink(destination: DetailEstimatedDatesScene(viewModel: viewModel), isActive: $isNavigate) {}
             VStack {
-                DatePicker(selection: $viewModel.satDate, in: ...Date(), displayedComponents: .date) {
-                    HStack {
-                        Text(Constants.selectSAT).foregroundColor(.primary).bold().font(.title2)
-                    }
-                }.padding()
+                HStack {
+                    Text(Constants.selectSAT).bold().font(.title2).foregroundColor(Color("EstimatedTextColor"))
+                    DatePicker(selection: $viewModel.satDate, in: ...Date(), displayedComponents: .date) {}.padding().accentColor(Color("EstimatedTextColor")).colorScheme(colorScheme == .dark ? .light : .dark)
+                }
+
                 Spacer()
                 Text(Constants.probableDateOfBirth).font(.title2).multilineTextAlignment(.center)
                 Text(viewModel.estimatedBirthDate)
@@ -31,11 +32,11 @@ struct EstimatedDateView: View {
                 } label: {
                     HStack {
                         Spacer()
-                        Text(Constants.forMore).foregroundColor(.primary)
-                        Image(systemName: "chevron.right").foregroundColor(.primary)
+                        Text(Constants.forMore)
+                        Image(systemName: "chevron.right")
                     }
                 }.padding()
-            }.padding()
+            }.padding().foregroundColor(Color("EstimatedTextColor"))
         }
         .frame(width: UIScreen.screenWidth - 20, height: UIScreen.screenWidth * 0.6)
         .background(RoundedRectangle(cornerRadius: 12)

@@ -23,7 +23,7 @@ struct DetailEstimatedDatesScene: View {
                 }
                 VStack(alignment: .leading) {
                     Text(Constants.fetalAge).font(.title2)
-                    Text(viewModel.fetalWeek + viewModel.fetalDay)
+                    Text(viewModel.fetalWeek + (viewModel.fetalWeek.isEmpty ? "" : " ") + viewModel.fetalDay)
                         .rowValueModifier()
                 }
                 VStack(alignment: .leading) {
