@@ -77,6 +77,40 @@ class EstimatedDatesViewModel: NSObject, ObservableObject {
         return addWeek(weekCount: 40)
     }
 
+    var probableZodiacSign: String {
+        let date: Date = Calendar.current.date(byAdding: .weekOfYear, value: 40, to: satDate)!
+        let calendar = Calendar.current
+        let d = calendar.component(.day, from: date)
+        let m = calendar.component(.month, from: date)
+
+        switch (d, m) {
+        case (21 ... 31, 1), (1 ... 19, 2):
+            return "aquarius".localized()
+        case (20 ... 29, 2), (1 ... 20, 3):
+            return "pisces".localized()
+        case (21 ... 31, 3), (1 ... 20, 4):
+            return "aries".localized()
+        case (21 ... 30, 4), (1 ... 21, 5):
+            return "taurus".localized()
+        case (22 ... 31, 5), (1 ... 21, 6):
+            return "gemini".localized()
+        case (22 ... 30, 6), (1 ... 22, 7):
+            return "cancer".localized()
+        case (23 ... 31, 7), (1 ... 22, 8):
+            return "leo".localized()
+        case (23 ... 31, 8), (1 ... 23, 9):
+            return "virgo".localized()
+        case (24 ... 30, 9), (1 ... 23, 10):
+            return "libra".localized()
+        case (24 ... 31, 10), (1 ... 22, 11):
+            return "scorpio".localized()
+        case (23 ... 30, 11), (1 ... 21, 12):
+            return "sagittarius".localized()
+        default:
+            return "capricorn".localized()
+        }
+    }
+
     override init() {
         super.init()
     }

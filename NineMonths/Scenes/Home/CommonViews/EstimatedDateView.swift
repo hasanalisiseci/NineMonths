@@ -9,9 +9,11 @@ import SwiftUI
 
 struct EstimatedDateView: View {
     @ObservedObject var viewModel = EstimatedDatesViewModel()
+    @State var isNavigate = false
 
     var body: some View {
         ZStack {
+            NavigationLink(destination: DetailEstimatedDatesScene(viewModel: viewModel), isActive: $isNavigate) {}
             VStack {
                 DatePicker(selection: $viewModel.satDate, in: ...Date(), displayedComponents: .date) {
                     HStack {
@@ -23,17 +25,18 @@ struct EstimatedDateView: View {
                 Text(viewModel.estimatedBirthDate)
                     .bold().font(.largeTitle)
                 Spacer()
-
-                NavigationLink(destination: DetailEstimatedDatesScene(viewModel: viewModel)) {
+                Button {
+                    isNavigate.toggle()
+                    FirebaseAnalyticsManager.shared.event(eventName: "estimated_detail_button_clicked", eventDescription: "Estimaed for more button is clicked")
+                } label: {
                     HStack {
                         Spacer()
                         Text(Constants.forMore).foregroundColor(.primary)
                         Image(systemName: "chevron.right").foregroundColor(.primary)
                     }
                 }.padding()
-            }
+            }.padding()
         }
-
         .frame(width: UIScreen.screenWidth - 20, height: UIScreen.screenWidth * 0.6)
         .background(RoundedRectangle(cornerRadius: 12)
             .frame(width: UIScreen.screenWidth - 20, height: UIScreen.screenWidth * 0.6)
