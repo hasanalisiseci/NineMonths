@@ -52,6 +52,7 @@
 		749ECF6D28FAE9D800C0CAB1 /* EstimatedDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF6C28FAE9D800C0CAB1 /* EstimatedDateView.swift */; };
 		749ECF6F28FB496700C0CAB1 /* WeeklyDetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF6E28FB496600C0CAB1 /* WeeklyDetailScene.swift */; };
 		749ECF7128FB503B00C0CAB1 /* DetailEstimatedDatesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749ECF7028FB503B00C0CAB1 /* DetailEstimatedDatesScene.swift */; };
+		74D96B562901509500AB6F70 /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D96B552901509500AB6F70 /* DetailRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		749ECF6C28FAE9D800C0CAB1 /* EstimatedDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDateView.swift; sourceTree = "<group>"; };
 		749ECF6E28FB496600C0CAB1 /* WeeklyDetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDetailScene.swift; sourceTree = "<group>"; };
 		749ECF7028FB503B00C0CAB1 /* DetailEstimatedDatesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEstimatedDatesScene.swift; sourceTree = "<group>"; };
+		74D96B552901509500AB6F70 /* DetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			children = (
 				749ECF7028FB503B00C0CAB1 /* DetailEstimatedDatesScene.swift */,
 				7423BF9F28FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift */,
+				74D96B552901509500AB6F70 /* DetailRow.swift */,
 			);
 			path = DetailEstimated;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				74805E9F28FA220E001731F5 /* Int+Extension.swift in Sources */,
 				74805EA828FA2583001731F5 /* ErrorTypes.swift in Sources */,
 				74805E9328FA0E72001731F5 /* HomeScene.swift in Sources */,
+				74D96B562901509500AB6F70 /* DetailRow.swift in Sources */,
 				7423BFA028FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift in Sources */,
 				7452FDC728FAA75A008DF6C9 /* String+Extension.swift in Sources */,
 				74805EBA28FA3D27001731F5 /* NameScene.swift in Sources */,

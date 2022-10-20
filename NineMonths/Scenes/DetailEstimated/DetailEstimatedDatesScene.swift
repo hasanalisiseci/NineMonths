@@ -16,54 +16,23 @@ struct DetailEstimatedDatesScene: View {
                 DatePicker(selection: $viewModel.satDate, in: ...Date(), displayedComponents: .date) {
                     Text(Constants.selectSAT).foregroundColor(.primary).bold().font(.title2)
                 }
-
-                VStack(alignment: .leading) {
-                    Text(Constants.probableDateOfGetPregnant).font(.title2)
-                    Text(viewModel.probableDateOfGetPregnant).rowValueModifier()
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.fetalAge).font(.title2)
-                    Text(viewModel.fetalWeek + (viewModel.fetalWeek.isEmpty ? "" : " ") + viewModel.fetalDay)
-                        .rowValueModifier()
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.heartbeat).font(.title2)
-                    Text(viewModel.firstDateOfHeartbeatOnUltrasound + " - " + viewModel.secondDateOfHeartbeatOnUltrasound)
-                        .rowValueModifier()
-                    Text("7 - 8 \(Constants.week)")
-                        .bold().font(.callout)
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.doubleMarkerTest).font(.title2)
-                    Text(viewModel.firstDateOfDoubleMarkerTest + " - " + viewModel.secondDateOfDoubleMarkerTest)
-                        .rowValueModifier()
-                    Text("12 - 13 \(Constants.week)")
-                        .bold().font(.callout)
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.quadrupleTest).font(.title2)
-                    Text(viewModel.firstDateOfQuadrupleTest + " - " + viewModel.secondDateOfQuadrupleTest)
-                        .rowValueModifier()
-                    Text("16 - 18 \(Constants.week)")
-                        .bold().font(.callout)
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.organScreening).font(.title2)
-                    Text(viewModel.organScreening)
-                        .rowValueModifier()
-                    Text("20 - 22 \(Constants.week)")
-                        .bold().font(.callout)
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.cervicalLength).font(.title2)
-                    Text(viewModel.bestDateOfservicalLength)
-                        .rowValueModifier()
-                }
-                VStack(alignment: .leading) {
-                    Text(Constants.probableZodiacSign).font(.title2)
-                    Text(viewModel.probableZodiacSign)
-                        .rowValueModifier()
-                }
+                DetailRow(title: Constants.probableDateOfGetPregnant,
+                          value: viewModel.probableDateOfGetPregnant)
+                DetailRow(title: Constants.fetalAge,
+                          value: viewModel.fetalWeek + (viewModel.fetalWeek.isEmpty ? "" : " "))
+                DetailRow(title: Constants.heartbeat,
+                          value: viewModel.firstDateOfHeartbeatOnUltrasound + " - " + viewModel.secondDateOfHeartbeatOnUltrasound,
+                          range: "7 - 8 \(Constants.week)")
+                DetailRow(title: Constants.doubleMarkerTest,
+                          value: viewModel.firstDateOfQuadrupleTest + " - " + viewModel.secondDateOfQuadrupleTest,
+                          range: "16 - 18 \(Constants.week)")
+                DetailRow(title: Constants.organScreening,
+                          value: viewModel.organScreening,
+                          range: "20 - 22 \(Constants.week)")
+                DetailRow(title: Constants.cervicalLength,
+                          value: viewModel.bestDateOfservicalLength)
+                DetailRow(title: Constants.probableZodiacSign,
+                          value: viewModel.probableZodiacSign)
                 VStack(alignment: .center) {
                     Text(Constants.probableDateOfBirth).font(.title2)
                     Text(viewModel.estimatedBirthDate)
