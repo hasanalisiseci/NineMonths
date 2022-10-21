@@ -15,6 +15,7 @@ struct Constants {
     static let enterLetter = "enter-letter".localized()
     static let monthByMontyPreg = "monthByMonthPreg".localized()
     static let weekByWeekPreg = "weekByWeekPreg".localized()
+    static let estimatedDateTitle = "estimated-date-title".localized()
     static let trendBabyNames = "trend-baby-names".localized()
     static let selectSAT = "select-sat".localized()
     static let probableDateOfBirth = "probably-date-of-birt".localized()

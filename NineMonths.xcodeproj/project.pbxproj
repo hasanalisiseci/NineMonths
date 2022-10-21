@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7423BF9C28FC154D00E1CBB2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423BF9B28FC154D00E1CBB2 /* Date+Extension.swift */; };
 		7423BF9E28FC19D100E1CBB2 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423BF9D28FC19D000E1CBB2 /* Text+Extension.swift */; };
-		7423BFA028FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423BF9F28FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift */; };
+		7423BFA028FC1B8500E1CBB2 /* EstimatedDatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423BF9F28FC1B8500E1CBB2 /* EstimatedDatesViewModel.swift */; };
 		7423BFA228FC34E700E1CBB2 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423BFA128FC34E700E1CBB2 /* FirebaseAnalyticsManager.swift */; };
 		7423BFB028FC9A0200E1CBB2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7423BFAF28FC9A0200E1CBB2 /* FirebaseAuth */; };
 		7423BFB428FC9EEE00E1CBB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7423BFB628FC9EEE00E1CBB2 /* InfoPlist.strings */; };
@@ -58,7 +58,7 @@
 /* Begin PBXFileReference section */
 		7423BF9B28FC154D00E1CBB2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		7423BF9D28FC19D000E1CBB2 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
-		7423BF9F28FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimaedDatesViewModel.swift; sourceTree = "<group>"; };
+		7423BF9F28FC1B8500E1CBB2 /* EstimatedDatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDatesViewModel.swift; sourceTree = "<group>"; };
 		7423BFA128FC34E700E1CBB2 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
 		7423BFA828FC90B000E1CBB2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7423BFB528FC9EEE00E1CBB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -328,7 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				749ECF7028FB503B00C0CAB1 /* DetailEstimatedDatesScene.swift */,
-				7423BF9F28FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift */,
+				7423BF9F28FC1B8500E1CBB2 /* EstimatedDatesViewModel.swift */,
 				74D96B552901509500AB6F70 /* DetailRow.swift */,
 			);
 			path = DetailEstimated;
@@ -460,7 +460,7 @@
 				74805EA828FA2583001731F5 /* ErrorTypes.swift in Sources */,
 				74805E9328FA0E72001731F5 /* HomeScene.swift in Sources */,
 				74D96B562901509500AB6F70 /* DetailRow.swift in Sources */,
-				7423BFA028FC1B8500E1CBB2 /* EstimaedDatesViewModel.swift in Sources */,
+				7423BFA028FC1B8500E1CBB2 /* EstimatedDatesViewModel.swift in Sources */,
 				7452FDC728FAA75A008DF6C9 /* String+Extension.swift in Sources */,
 				74805EBA28FA3D27001731F5 /* NameScene.swift in Sources */,
 				7423BF9E28FC19D100E1CBB2 /* Text+Extension.swift in Sources */,

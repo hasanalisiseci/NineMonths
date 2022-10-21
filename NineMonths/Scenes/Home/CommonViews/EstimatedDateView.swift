@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EstimatedDateView: View {
-    @ObservedObject var viewModel = EstimatedDatesViewModel()
+    @StateObject var viewModel: EstimatedDatesViewModel
     @Environment(\.colorScheme) var colorScheme
     @State var isNavigate = false
 
@@ -47,6 +47,6 @@ struct EstimatedDateView: View {
 
 struct EstimatedDateView_Previews: PreviewProvider {
     static var previews: some View {
-        EstimatedDateView()
+        EstimatedDateView(viewModel: EstimatedDatesViewModel())
     }
 }

@@ -12,6 +12,7 @@ import SwiftUI
 
 struct HomeScene: View {
     @ObservedObject var homeViewModel = HomeViewModel()
+    @ObservedObject var estimatedViewModel = EstimatedDatesViewModel()
 
     let columns = [
         GridItem(.flexible()),
@@ -38,7 +39,7 @@ struct HomeScene: View {
                                         ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
                                             NavigationLink(destination: WeeklyDetailScene(item: item!)) {
                                                 WeeklyCell(model: item!)
-                                            }.padding()
+                                            }.padding().tag(estimatedViewModel.whickWeek)
                                         }
                                     }
                                     .tabViewStyle(.page(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never))
@@ -49,7 +50,11 @@ struct HomeScene: View {
                             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight * 0.25)
                         }
                     }
-                    EstimatedDateView()
+                    HStack {
+                        Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
+                        Spacer()
+                    }.padding(.leading,5)
+                    EstimatedDateView(viewModel: estimatedViewModel)
                     HStack {
                         Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
                         Spacer()

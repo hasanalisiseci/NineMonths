@@ -20,7 +20,14 @@ extension Date: RawRepresentable {
 
 class EstimatedDatesViewModel: NSObject, ObservableObject {
     @AppStorage("satDate") var satDate: Date = Date(rawValue: Date().rawValue) ?? Date()
-
+    
+    var whickWeek: Int {
+        var temp = Date().timeIntervalSince1970 - satDate.timeIntervalSince1970
+        temp = temp / 604800
+        let week = temp
+        return Int(week)
+    }
+    
     var probableDateOfGetPregnant: String {
         // probable date of get pregnant -> sat + 2 week
         return addWeek(weekCount: 2)
