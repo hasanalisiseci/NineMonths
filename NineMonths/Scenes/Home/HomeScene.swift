@@ -26,26 +26,34 @@ struct HomeScene: View {
                     HStack {
                         Text(Constants.weekByWeekPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
                         Spacer()
-                    }
+                    }.padding(.leading,5)
                     if homeViewModel.weekByWeekPregnancy.isEmpty {
                         ProgressView()
                             .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth * 0.6)
                     } else {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
-                                    NavigationLink(destination: WeeklyDetailScene(item: item!)) {
-                                        WeeklyCell(model: item!)
+                        VStack {
+                            GeometryReader { reader in
+                                VStack(alignment: .center) {
+                                    TabView {
+                                        ForEach(homeViewModel.weekByWeekPregnancy, id: \.self) { item in
+                                            NavigationLink(destination: WeeklyDetailScene(item: item!)) {
+                                                WeeklyCell(model: item!)
+                                            }.padding()
+                                        }
                                     }
+                                    .tabViewStyle(.page(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never))
+                                    .frame(width: reader.size.width, height: UIScreen.screenHeight * 0.25)
                                 }
                             }
+                            .frame(maxWidth: .infinity)
+                            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight * 0.25)
                         }
                     }
                     EstimatedDateView()
                     HStack {
                         Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
                         Spacer()
-                    }
+                    }.padding(.leading,5)
                     if homeViewModel.monthByMonthPregnancy.isEmpty {
                         ProgressView()
                             .frame(width: UIScreen.screenWidth * 0.9, height: UIScreen.screenWidth * 0.9)

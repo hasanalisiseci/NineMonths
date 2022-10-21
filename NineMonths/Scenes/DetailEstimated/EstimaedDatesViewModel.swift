@@ -8,8 +8,18 @@
 import Foundation
 import SwiftUI
 
+extension Date: RawRepresentable {
+    public var rawValue: String {
+        self.timeIntervalSinceReferenceDate.description
+    }
+    
+    public init?(rawValue: String) {
+        self = Date(timeIntervalSinceReferenceDate: Double(rawValue) ?? 0.0)
+    }
+}
+
 class EstimatedDatesViewModel: NSObject, ObservableObject {
-    @Published var satDate = Date() // Son adet tarihi
+    @AppStorage("satDate") var satDate: Date = Date(rawValue: Date().rawValue) ?? Date()
 
     var probableDateOfGetPregnant: String {
         // probable date of get pregnant -> sat + 2 week
