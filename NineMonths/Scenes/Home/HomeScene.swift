@@ -51,7 +51,7 @@ struct HomeScene: View {
                         }
                     }
                     HStack {
-                        Text(Constants.monthByMontyPreg).bold().font(.title).padding(.horizontal).padding(.top, 20)
+                        Text(Constants.estimatedDateTitle).bold().font(.title).padding(.horizontal).padding(.top, 20)
                         Spacer()
                     }.padding(.leading,5)
                     EstimatedDateView(viewModel: estimatedViewModel)
