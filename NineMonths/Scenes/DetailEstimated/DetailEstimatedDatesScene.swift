@@ -19,7 +19,7 @@ struct DetailEstimatedDatesScene: View {
                 DetailRow(title: Constants.probableDateOfGetPregnant,
                           value: viewModel.probableDateOfGetPregnant)
                 DetailRow(title: Constants.fetalAge,
-                          value: viewModel.fetalWeek + (viewModel.fetalWeek.isEmpty ? "" : " "))
+                          value: viewModel.fetalWeek + (viewModel.fetalWeek.isEmpty ? "" : " ") + viewModel.fetalDay)
                 DetailRow(title: Constants.heartbeat,
                           value: viewModel.firstDateOfHeartbeatOnUltrasound + " - " + viewModel.secondDateOfHeartbeatOnUltrasound,
                           range: "7 - 8 \(Constants.week)")

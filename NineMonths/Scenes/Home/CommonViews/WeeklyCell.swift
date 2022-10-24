@@ -34,7 +34,9 @@ struct WeeklyCell: View {
                         .foregroundColor(.white)
                 }.padding()
             }
-        }.frame(width: UIScreen.screenWidth - 20)
+        }
+        .frame(width: UIScreen.screenWidth - 20, height: UIScreen.screenHeight * 0.25)
+        .cornerRadius(12)
     }
 }
 

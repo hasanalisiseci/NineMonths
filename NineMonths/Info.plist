@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserTrackingUsageDescription</key>
-	<string></string>
+	<string>Uygulama deneyiminizi iyileştirmek için izin verin.</string>
 	<key>FirebaseScreenReportingEnabled</key>
 	<false/>
 	<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
